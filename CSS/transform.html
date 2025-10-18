@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform + Animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            transform: translate(20px, 10px) scale(1.2) rotate(30deg);
+            transition: 3s linear;
+            /*transform: translate(-50px, 0px);*/
+            /* x - +ve right -ve y +ve bottom -ve top*/
+        }
+        .box:hover {
+            cursor: pointer;
+            transform: translate(150px, 150px);
+            /*transform: scale(5);*/
+            /* no -ve values */
+            transform: rotate(25deg);
+            /*+ve clock wise -ve anticlock wise*/
+            transform: skew(30deg, 20deg);
+            /* slant both +ve and -ve values are allowed*/
+
+            transform-origin: bottom right;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALLBACLK</title>
+</head>
+<body>
+    <script>
+        function x(callback) {
+            var a=10;
+            callback(a);
+        }
+
+        x(function y(a) {
+            console.log(a);
+        });
+
+        function x() {
+            var a=10;
+            return function y() {
+                console.log(a);
+            }
+        }
+        var z = x();
+        console.log(z);
+
+        z();
+    </script>
+</body>
+</html>

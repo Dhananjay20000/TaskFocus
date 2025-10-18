@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<body>
+    <form> 
+        <!--Not empty,Between 3-15 characters, Only Letters, numbers, underscores-->
+        <label>Username :</label>
+        <input type="text" id="username">
+        <br>
+        <br>
+        <label>Email</label>
+        <input type="email" id="email">
+        <br>
+        <br>
+        <label>Passward</label>
+        <input type="text" id="password">
+        <p style="color: red;" id="error"></p>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+       f = document.querySelector("form"); 
+       f.addEventListener('submit' ,(event)=>{ 
+        event.preventDefault(); //reset
+        let un = document.getElementById("username").value.trim();
+        // regex: only letters, numbers,underscore 
+        let regex = /^[a-zA-Z0-9_]+$/;
+
+        if(un === ""){
+            //alert("Name can not be empty")
+            document.getElementById("error").innerText ="Name can not be empty";
+        }else if(un.length < 2){
+            alert("Name cannot be less then 2 characters");
+        }else if(un.length > 30){
+            alert("Name cannot be more then 30 characters");
+        }else if(!regex.test(un)){
+            alert("only letters, numbers,underscore are allowed");
+        }
+        else{
+            alert("Valid name");
+        }
+        });
+
+        let email = document.getElementById("email").value.trim();
+        let emailRegex = /^[a-zA-Z0-9._-]=@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if(!emailRegex.test(email)){
+            alert("Invalid email");
+        }else {
+            alert("Valid email");
+        }
+
+        //Atleast one letter/Atleast one digit
+        alert("Form Submitted");
+
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,};
+        
+    </script>
+    
+</body>
+</html>

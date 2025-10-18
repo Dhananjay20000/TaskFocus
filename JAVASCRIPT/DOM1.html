@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="heading">Hello All</h1>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is a paragraph</p>
+    <p class="para">This is a paragraph</p>
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+    </ul>
+    <button onclick="changeText()">Click me</button>
+
+    <script>
+        document.getElementById("heading").innerText = "Hello";
+        let p = document.querySelectorALL("p");
+
+        p.forEach((p)=>console.log(p.style.color = "red"));
+
+        function changeText() {
+            b = document.querySelector("p");
+            b.style.color = "white";
+            b.style.background = "black";
+        }
+    </script>
+    </body>
+    </html>
+    

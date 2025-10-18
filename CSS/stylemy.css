@@ -1,0 +1,139 @@
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #2c2f4a, #11131e);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1e2235;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #1ed6ff;
+}
+
+/* Sign Up Button */
+.signup-btn {
+  padding: 8px 20px;
+  background: linear-gradient(to right, #c43aff, #00f2ff);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-content h2 span {
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #6edaff;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.learn-btn {
+  margin-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #1ed6ff;
+  border-radius: 25px;
+  color: #1ed6ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.learn-btn i {
+  margin-right: 8px;
+}
+
+.learn-btn:hover {
+  background-color: #1ed6ff;
+  color: #000;
+}
+
+/* Hero Image */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Footer Icons */
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background: linear-gradient(to right, #c43aff, #00f2ff);
+}
+
+.icon-block {
+  text-align: center;
+  color: white;
+}
+
+.icon-block i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.icon-block p {
+  font-size: 14px;
+}

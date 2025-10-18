@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+        <!--Username-->
+        <label for="un">Full Name*</label>
+        <input type="text" id="un" placeholder="Fill in the username" name="username" required>
+        <br>
+        <br>
+
+        <!--email-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="dolly@gmail.com" name="email"><br><br>
+
+        <!--Password Input Field-->
+        <label for="password">Password:</label>
+        <input type="number" id="password" name="password" placeholder="Enter your password" required title="please enter your password"> <br><br>
+
+
+         
+        <!--Date-->
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date" name="date" title="Enter DOB">
+        <br>
+        <br>
+         <!--Textarea-->
+            <label for="Sort Bio">Short Bio:</label><br>
+            <textarea id="Short Bio" rows="10" cols="40" title="Enter your valuable text:"></textarea>
+            <br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Gender:</legend>
+        <!--radio buttons-->
+            <label>
+                <input type="radio" name="gender" value="m">Male<br>
+            </label>
+            <label>
+                <input type="radio" name="gender" value="f">Femail<br>
+            </label>
+            <label>
+                <input type="radio" name="gender" value="o">Other
+            </label>
+            <br>
+            <br>
+            </fieldset>
+            <fieldset>
+                <legend>Areas of Interest</legend>
+            <!--checkbox-->
+        <label for="html">
+                <input type="checkbox" name="web development" value="web development" id="web development"> Web Development<br>
+            </label>
+            <label>
+                <input type="checkbox" name="artificial Intelligence" value="artificial Intelligence"> Artificial Intelligence<br>
+            </label>
+            <label>
+                <input type="checkbox" name="data science" value="data science"> Data Science<br>
+            </label>
+            <br>
+            <br>
+            </fieldset>

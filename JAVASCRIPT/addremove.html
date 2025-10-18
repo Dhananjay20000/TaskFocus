@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add and remove</title>
+    <style>
+        div {
+            height: 100px; width: 100px;
+            padding: 1-px; border: 2px solid red
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to DOM</h1>
+    <button onclick="addBox()">Add box</button>
+    <button onclick="removeBox()">Remove box</button>
+
+    <script>
+        function addBox() {
+            b = document.querySelector("body");
+            newDiv = document.createElement("div");
+            b.appendChild(newDiv);
+        }
+        function removeBox() {
+            b = document.querySelector("body");
+            Divitem = document.querySelector("div");
+            b.removeChild(Divitem);
+        }
+    </script>
+</body>
+</html>

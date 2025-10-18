@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        body {
+            background-color: blue;
+            animation-name: changecolor;
+            animation-duration: 10s;
+            animation-iteration-count: 3;
+        }
+        h1 {
+            text-align: center;
+            color: aqua;
+            animation-name: fadeIn;
+            animation-duration: 6s;
+            animation-timing-function: ease-in-out;
+
+        }
+        @keyframes changecolor {
+            0% {background-color: aqua;}
+            20% {background-color: yellow;}
+            50% {background-color: green;}
+            70% {background-color: brown;}
+            100% {background-color: red; color: white}
+        }
+
+        @keyframes fadeIn {
+            0%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcomd To Kodnest</h1>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validatiion:</title>
+</head>
+<body>
+    <!--990-345-5678 = \d-9-->
+    <form>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" pattern="^+91[ ]{1}\d{3}-\d{3}-\d{4}$" title="Form">
+        <input type="submit" value="Submit">
+        <br>
+        <br>
+        <!--Password Validation-->
+        <label for="pwd">Password</label>
+        <input type="text" id="pwd" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$" title="Atleast 8 characters">
+        <input type="submit">
+        <br>
+        <br>
+        <label for="pwd">Password</label>
+        <input type="text" id="pwd" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$" title="Atleast 8 characters">
+        <input type="submit">
+        <br>
+        <br>
+        <label for="pwd">Password</label>
+        <input type="text" id="pwd" name="password" pattern="^(?=.*[A-Z])(?=.*\d){2}(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$" title="Atleast 10 characters">
+        <input type="submit">
+        <br>
+        <br>
+        <!-- gamana@kodnest.com = ^.+@kodnest+\.[a-z]{2,}$ -->
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Atleast 2 characters">
+        <input type="submit">
+        <br>
+        <br>
+        <h2>Password Validation</h2>
+        <form id="passwordForm">
+            <label for="passwordForm"></label>
+            <input
+            type="password"
+            id="password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%&#]{10,15}$"
+            title="Password must be 10 to 15 characters long, including atleast 1 uppercase and 1 lovercase and any one special char">
+            <button type="submit">SUBMIT</button>
+        </form>
+
+    </form>
+</body>
+</html>

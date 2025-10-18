@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: 30px;
+            border: 3px solid black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"> Click & Hover on me</div>
+    <button id="myButton">Click here</button>
+    <input type="text" id="ip" placeholder="start typing">
+    <br>
+    <p id="output"> displayed here</p>
+
+    <script>
+        //keyboard events
+        const op = document.getElementById("output")
+        document.getElementById("ip").addEventListner("keydown", (event) => {
+            console.log(`Key pressed(keydown) : ${event.key}`);
+        });
+
+        document.getElementById("ip").addEventListner("keyup", (event) => {
+            console.log(`Key released(keyup) : ${event.key}`);
+        });
+
+        //keypress: when a key that produces a character is pressed
+        document.getElementById("id").addEventListner("keypress", (event) => {
+            op.innerText = `Key Pressed is : ${event.key}`;
+        });
+
+        //window events
+        window.addEventListener("resize", () => {
+            alert("Window resied by the user!");
+        })
+
+        window.addEventListener("scroll", () => {
+            alert("page scrolled");
+        })
+
+        window.addEventListener("DOM ContentLoaded", () => {
+            alert("Document completely loaded");
+        })
+
+
+    </script>
+    <script>
+        const box = document.getElementById("box");
+        //Mouse Events
+        box.addEventListener("click" , () => {
+            box.style.backgroundColor = "red";
+            box.style.color = "white";
+        } ); 
+
+        document.getElementById("myButton").addEventListener("dblclick" , () => {
+            alert("Double Clicked")
+        } ); 
+
+        box.addEventListener("mouseover" , () => {
+            box.style.backgroundColor = "yellow";
+        } );
+
+        box.addEventListener("mouseout" , () => {
+            box.style.backgroundColor = "cyan";
+        } );
+
+        box.addEventListener("mousemove" , (event) => {
+            //console.log(`Mouse position: (${event.clientX}, ${event.clientY})`);
+            box.innerText = `X: ${event.offsetX}, Y: ${event.offsetY}`;
+        } );
+    </script>
+</body>
+</html>

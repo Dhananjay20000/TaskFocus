@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Checker</title>
+</head>
+<body>
+    <body>
+        <h2>Pick a fruit:</h2>
+        <input type="radio" name="fruit" value="Apple"> Apple<br>
+        <input type="radio" name="fruit" value="Banana"> Banana<br>
+        <button onclick="showFruit()">Check Fruit</button>
+        <script>
+            function showFruit() {
+                let fruits = document.getElementsByName("fruit");
+                
+                for (let i = 0; i < fruits.length; i++) {
+                    if (fruits[i].checked) {
+                        alert("You selected: " + fruits[i].value);
+                        return; 
+                    }
+                }
+                alert("No fruit selected");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Popup Boxes</title>
+    </head>
+    <body>
+        <script>
+            //Alert
+            alert("This id an Alert Box!");
+
+            //Confirm
+            let choice = confirm("Do you want to continue?");
+            document.writeln("User clicked on " + choice);
+            alert("You chose: ") + (choice ? "OK" : "Cancel");
+
+            //Prompt
+            let name = prompt("Enter your name:");
+            alert(name ? "Hello, " + name + "!" : "You didn't enter anything.");
+        </script>
+    </body>
+</html>

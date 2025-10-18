@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List JS</title>
+    <style>
+        .Highlight {
+            background-color: aqua;
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>`
+    <h1 class="text">Welcom to JS</h1>
+    <button onclick="addhigh()">Add Highlight</button>
+    <button onclick="removehigh()">Remove Highlight</button>
+    <button onclick="togglethigh()">Toggle Highlight</button>
+    <button onclick="checkhigh()">Check Highlight</button>
+
+    <script>
+        let text = document.getElementById("text");
+        function addhigh() {
+            text.classLists.add("highlight");
+        }
+        function removehigh() {
+            text.classLists.remove("highlight");
+        }
+        function togglehigh() {
+            text.classLists.toggle("highlight");
+        }
+        function checkhigh() {
+            if(text.classLists.contains("highlight")) {
+                alert("Highlight class is applied!");
+            } else {
+                aler("Highlight class is not applied!");
+            }
+        }
+    </script>
+</body>
+</html>
